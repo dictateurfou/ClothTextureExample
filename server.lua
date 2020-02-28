@@ -2,9 +2,7 @@
 local players = {}
 
 local textures = {
-    "texturetest/textures/police1.png",
     "texturetest/textures/jacket_lacoste_gold.png",
-    "texturetest/textures/NormalMap.png",
     "texturetest/textures/universe.jpg",
     "texturetest/textures/lv.jpg"
 }
