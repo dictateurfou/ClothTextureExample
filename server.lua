@@ -31,6 +31,23 @@ local clothes = {
     }
 }
 
+local vehicleStyle = {
+    {["type"] = "texture", ["texture"] = "texturetest/textures/jacket_lacoste_gold.png"},
+    {
+        ["type"] = "texture", 
+        ["texture"] = "texturetest/textures/universe.jpg",
+        ["materials"] = "/Materials2/MI_AnimatedTexture",--materials instance
+        ["panner"] = {x=0.2,y=0.0}
+    },
+    {
+        ["type"] = "texture", 
+        ["texture"] = "texturetest/textures/lv.jpg",
+        ["materials"] = "/Materials2/MI_AnimatedTexture",--materials instance
+        ["panner"] = {x=0.2,y=0.1},
+        ["roughness"] = 0.0
+    }
+}
+
 AddEvent("OnPlayerSteamAuth", function(player)
     players[player] = {
         model = "/Game/CharacterModels/SkeletalMesh/BodyMerged/HZN_CH3D_Normal02_LPR",
@@ -44,6 +61,13 @@ AddCommand("cloth",function(player,part,id)
     if clothes[part][id] ~= nil then
         players[player][part] = clothes[part][id]
         CallRemoteEvent(player,"texturetest:setPart",part,clothes[part][id],players[player].model)
+    end
+end)
+
+AddCommand("vehstyle", function(player,id,ms)
+    id = tonumber(id)
+    if vehicleStyle[id] ~= nil then
+        CallRemoteEvent(player,"texturetest:vehicleStyle",GetPlayerVehicle(player),vehicleStyle[id],ms)
     end
 end)
 

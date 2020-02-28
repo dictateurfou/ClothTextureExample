@@ -10,8 +10,6 @@
     "files" : [
         "Materials2.pak",
         "textures/jacket_lacoste_gold.png",
-        "textures/police1.png",
-        "textures/NormalMap.png",
         "textures/universe.jpg",
         "textures/lv.jpg"
     ]
