@@ -1,0 +1,19 @@
+{
+	"author": "Dictateurfou",
+    "version": "1.0",
+    "server_scripts": [
+        "server.lua"
+	],
+	"client_scripts": [
+        "client.lua"
+	],
+    "files" : [
+        "Materials2.pak",
+        "textures/jacket_lacoste_gold.png",
+        "textures/police1.png",
+        "textures/NormalMap.png",
+        "textures/universe.jpg",
+        "textures/lv.jpg"
+    ]
+    
+}
